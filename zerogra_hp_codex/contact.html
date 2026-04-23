@@ -42,7 +42,10 @@
     </section>
 
     <section class="contact-form-wrap">
-      <form class="contact-form" action="mailto:info@zerograwave.com" method="post" enctype="text/plain">
+      <form class="contact-form" action="https://formsubmit.co/info@zerograwave.com" method="POST">
+        <input type="hidden" name="_subject" value="ZERO GRA WAVE お問い合わせ" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://zerogra.seren-group.jp/thanks.html" />
         <div class="form-group">
           <label for="company">御社名（サロン名）</label>
           <input id="company" name="company" type="text" placeholder="会社名" />
@@ -70,7 +73,7 @@
 
         <div class="form-consent">
           <div class="check-row">
-            <input id="agree-policy" name="agree_policy" type="checkbox" required />
+            <input id="agree-policy" name="agree_policy" type="checkbox" value="同意する" required />
             <label for="agree-policy">私は</label>
             <a class="policy-link" href="./privacy.html">利用規約（PRIVACY POLICY）</a>
             <span>に同意します。</span>
@@ -79,7 +82,7 @@
 
         <div class="robot-box">
           <label class="robot-check" for="not-robot">
-            <input id="not-robot" name="not_robot" type="checkbox" required />
+            <input id="not-robot" name="not_robot" type="checkbox" value="確認済み" required />
             <span>私はロボットではありません</span>
           </label>
           <span class="robot-brand">reCAPTCHA</span>
@@ -93,4 +96,5 @@
   </main>
 </body>
 </html>
+
 
