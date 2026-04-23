@@ -62,12 +62,26 @@ h3,
   white-space: nowrap;
 }
 
+.gnav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
 
 .gnav a {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.35rem;
   color: #3f3f45;
   text-decoration: none;
+  white-space: nowrap;
 }
+
+.gnav a + a {
+  margin-left: 24px;
+}
+
+
 .mobile-quick-links {
   display: none;
 }
@@ -844,7 +858,6 @@ html {
     font-size: 1.8rem;
   }
 }
-
 
 
 
