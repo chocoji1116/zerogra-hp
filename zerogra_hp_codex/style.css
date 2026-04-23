@@ -74,9 +74,11 @@ h3,
   text-decoration: none;
 }
 
-.mobile-quick-links {
+
+.mobile-drawer {
   display: none;
 }
+
 
 .btn {
   display: inline-flex;
@@ -846,4 +848,5 @@ html {
     font-size: 1.8rem;
   }
 }
+
 
