@@ -601,9 +601,48 @@ html {
     color: #3f3f45;
   }
 
-  .menu-btn {
+
+  .mobile-drawer {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+    background: rgba(248, 248, 250, 0.98);
+    border: 1px solid var(--line);
+    z-index: 25;
+  }
+
+  body.menu-open .mobile-drawer {
+    display: flex;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .mobile-drawer a {
     display: block;
-    margin-left: 4px;
+    text-decoration: none;
+    color: #2e2e34;
+    padding: 10px 8px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e3e3e7;
+  }
+
+  .mobile-drawer a:last-child {
+    border-bottom: 0;
+  }
+
+  .mobile-drawer .mobile-drawer-contact {
+    margin-top: 6px;
+    background: #08090a;
+    color: #fff;
+    text-align: center;
+    border-bottom: 0;
   }
 
   .hero-grid,
@@ -807,3 +846,4 @@ html {
     font-size: 1.8rem;
   }
 }
+

@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#">ZERO GRA WAVE</a>
+      <a class="logo" href="./index.html">ZERO GRA WAVE</a>
       <nav class="gnav" aria-label="グローバルナビゲーション">
         <a href="#concept">CONCEPT</a>
         <a href="#feature">FEATURE</a>
@@ -27,7 +27,17 @@
         <a href="#sns">SNS</a>
       </div>
       <a class="btn btn-sm" href="./contact.html">お問い合わせはこちら</a>
-      <button class="menu-btn" aria-label="メニューを開く">☰</button>
+      <button class="menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-drawer">☰</button>
+      <nav class="mobile-drawer" id="mobile-drawer" aria-label="モバイルメニュー">
+        <a href="#concept">CONCEPT</a>
+        <a href="#feature">FEATURE</a>
+        <a href="#technology">TECHNOLOGY</a>
+        <a href="#results">RESULTS</a>
+        <a href="#flow">FLOW</a>
+        <a href="#faq">FAQ</a>
+        <a href="#sns">SNS</a>
+        <a class="mobile-drawer-contact" href="./contact.html">お問い合わせはこちら</a>
+      </nav>
     </div>
   </header>
 
@@ -542,6 +552,30 @@
       </div>
     </section>
   </main>
+  <script>
+    (() => {
+      const btn = document.querySelector('.menu-btn');
+      const drawer = document.querySelector('.mobile-drawer');
+      if (btn && drawer) {
+        btn.addEventListener('click', () => {
+          const open = document.body.classList.toggle('menu-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        drawer.querySelectorAll('a').forEach((a) => {
+          a.addEventListener('click', () => {
+            document.body.classList.remove('menu-open');
+            btn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      if (location.hash === '#') {
+        history.replaceState(null, '', location.pathname + location.search);
+        window.scrollTo(0, 0);
+      }
+    })();
+  </script>
 </body>
 </html>
+
 
