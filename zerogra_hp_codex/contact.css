@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #f6f6f7;
   --surface: #ececee;
   --text: #1d1d22;
@@ -82,7 +82,7 @@ body {
 }
 
 .btn::after {
-  content: "→";
+  content: "竊・;
   margin-left: 10px;
 }
 
@@ -266,7 +266,7 @@ body {
   }
 
   .mobile-quick-links {
-    display: flex;
+    display: flex !important;
     gap: 12px;
     margin-left: auto;
   }
@@ -324,3 +324,6 @@ body {
     height: 24px;
   }
 }
+
+
+

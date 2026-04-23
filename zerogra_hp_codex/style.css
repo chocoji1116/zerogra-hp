@@ -588,7 +588,7 @@ html {
   }
 
   .mobile-quick-links {
-    display: flex;
+    display: flex !important;
     gap: 12px;
     margin-left: auto;
   }
@@ -844,6 +844,9 @@ html {
     font-size: 1.8rem;
   }
 }
+
+
+
 
 
 
