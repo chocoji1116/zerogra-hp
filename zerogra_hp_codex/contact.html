@@ -16,18 +16,29 @@
       <nav class="gnav" aria-label="グローバルナビゲーション">
         <a href="./index.html#concept">CONCEPT</a>
         <a href="./index.html#feature">FEATURE</a>
+        <a href="./online-guide.html">導入ガイド</a>
         <a href="./index.html#technology">TECHNOLOGY</a>
         <a href="./index.html#results">RESULTS</a>
         <a href="./index.html#flow">FLOW</a>
         <a href="./index.html#faq">FAQ</a>
         <a href="./index.html#sns">SNS</a>
       </nav>
-      <div class="mobile-quick-links" aria-label="モバイルクイックリンク" style="display:none;">
+      <div class="mobile-quick-links" aria-label="モバイルクイックリンク" style="display:none;"></div>
+      <a class="btn btn-sm btn-outline" href="./maintenance.html">メンテナンスはこちら</a>
+      <a class="btn btn-sm" href="./contact.html">お問い合わせはこちら</a>
+      <button class="menu-btn" id="menu-btn" aria-label="メニューを開く" aria-expanded="false">☰</button>
+      <nav class="mobile-drawer" id="mobile-drawer" aria-label="モバイルメニュー">
+        <a href="./index.html#concept">CONCEPT</a>
+        <a href="./index.html#feature">FEATURE</a>
+        <a href="./online-guide.html">導入ガイド</a>
+        <a href="./index.html#technology">TECHNOLOGY</a>
+        <a href="./index.html#results">RESULTS</a>
+        <a href="./index.html#flow">FLOW</a>
         <a href="./index.html#faq">FAQ</a>
         <a href="./index.html#sns">SNS</a>
-      </div>
-      <a class="btn btn-sm" href="./contact.html">お問い合わせはこちら</a>
-      <button class="menu-btn" aria-label="メニューを開く">☰</button>
+        <a href="./maintenance.html">メンテナンスはこちら</a>
+        <a class="mobile-drawer-contact" href="./contact.html">お問い合わせはこちら</a>
+      </nav>
     </div>
   </header>
 
@@ -45,7 +56,7 @@
       <form class="contact-form" action="https://formsubmit.co/info@zerograwave.com" method="POST">
         <input type="hidden" name="_subject" value="ZERO GRA WAVE お問い合わせ" />
         <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://zerogra.seren-group.jp/thanks.html" />
+        <input type="hidden" name="_next" value="./thanks.html" />
         <div class="form-group">
           <label for="company">御社名（サロン名）</label>
           <input id="company" name="company" type="text" placeholder="会社名" />
@@ -94,7 +105,25 @@
       </form>
     </section>
   </main>
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    btn.addEventListener('click', () => {
+      const open = document.body.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded', open);
+      btn.textContent = open ? '✕' : '☰';
+    });
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '☰';
+      });
+    });
+  </script>
 </body>
 </html>
+
+
 
 

@@ -52,7 +52,7 @@ h3,
   height: 84px;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
 }
 
 .logo {
@@ -71,14 +71,14 @@ h3,
 .gnav a {
   display: inline-flex;
   align-items: center;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: #3f3f45;
   text-decoration: none;
   white-space: nowrap;
 }
 
 .gnav a + a {
-  margin-left: 24px;
+  margin-left: 18px;
 }
 
 
@@ -101,17 +101,33 @@ h3,
   padding: 0 30px;
   font-size: 1.6rem;
   letter-spacing: 0.06em;
+  border: 1.5px solid var(--accent);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--accent);
 }
 
 .btn::after {
-  content: "→";
-  margin-left: 10px;
+  content: none;
 }
 
 .btn-sm {
   min-height: 52px;
   font-size: 1.4rem;
-  padding: 0 18px;
+  padding: 0 16px;
+}
+
+.btn-outline {
+  background: var(--accent);
+  color: #fff;
+  border: 1.5px solid var(--accent);
+}
+
+.btn-outline::after {
+  content: none;
 }
 
 .menu-btn {
@@ -602,8 +618,11 @@ html {
   }
 
   .mobile-quick-links {
-    display: flex !important;
-    gap: 12px;
+    display: none !important;
+  }
+
+  .menu-btn {
+    display: block;
     margin-left: auto;
   }
 
@@ -858,6 +877,7 @@ html {
     font-size: 1.8rem;
   }
 }
+
 
 
 
